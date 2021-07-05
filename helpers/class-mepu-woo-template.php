@@ -34,15 +34,16 @@ class Mepu_Woo_Template
      */
     public static function get($filePath, $variables = [])
     {
-        $filePath = MEPU_WOO_PLUGIN_DIR. $filePath;
+        $filePath = MEPU_WOO_PLUGIN_DIR . $filePath;
         $output = NULL;
+
         if (!file_exists($filePath)) {
             echo "Cant find view file";
         }
 
         extract($variables);
         ob_start();
-            include $filePath;
+        include $filePath;
         $output = ob_get_clean();
         return $output;
     }

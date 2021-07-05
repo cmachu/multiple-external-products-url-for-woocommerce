@@ -41,7 +41,6 @@ class Mepu_Woo_Frontend
                 Mepu_Woo_Template::get("frontend/templates/product-page-template.php", $dataPack),
                 $dataPack
             );
-            return;
         }
 
         return;

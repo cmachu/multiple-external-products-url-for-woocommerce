@@ -39,11 +39,8 @@ class Mepu_Woo_Additional_Fields
      */
     public function mepu_extra_fields_process($post_id)
     {
-        if (!isset($_POST['woocommerce_meta_nonce'], $_POST['_external_target_blank'], $_POST['_external_show_in_cat'])) {
-            return false;
-        }
-
         if (!wp_verify_nonce(sanitize_key($_POST['woocommerce_meta_nonce']), 'woocommerce_save_data')) {
+            die('b');
             return false;
         }
 

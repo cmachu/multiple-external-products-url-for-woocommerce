@@ -30,7 +30,7 @@ class Mepu_Woo_Datastore
     }
 
     /**
-     * Set post_meta with visibility in category
+     * Set post_meta with visibility in category, or delete post_meta
      *
      * @param $post_id
      * @param $value
@@ -39,10 +39,17 @@ class Mepu_Woo_Datastore
      */
     public static function setCategoryVisibility($post_id, $value)
     {
-        return update_post_meta(
+        if ($value === 'yes') {
+            return update_post_meta(
+                $post_id,
+                '_external_show_in_cat',
+                'yes'
+            );
+        }
+
+        return delete_post_meta(
             $post_id,
-            '_external_show_in_cat',
-            $value === 'true' ? 'true' : 'false'
+            '_external_show_in_cat'
         );
     }
 
@@ -56,10 +63,16 @@ class Mepu_Woo_Datastore
      */
     public static function setTargetValue($post_id, $value)
     {
-        return update_post_meta(
+        if($value === 'yes') {
+            return update_post_meta(
+                $post_id,
+                '_external_target_blank',
+                'yes'
+            );
+        }
+        return delete_post_meta(
             $post_id,
-            '_external_target_blank',
-            $value === 'true' ? 'true' : 'false'
+            '_external_target_blank'
         );
     }
 
