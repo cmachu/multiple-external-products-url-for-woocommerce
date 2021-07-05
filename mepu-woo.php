@@ -69,10 +69,8 @@ require plugin_dir_path(__FILE__) . 'includes/class-mepu-woo.php';
  */
 function mepu_woo_run()
 {
-
     $plugin = new Mepu_Woo();
     $plugin->run();
-
 }
 
 mepu_woo_run();

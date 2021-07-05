@@ -198,8 +198,8 @@ class Mepu_Woo
      * The name of the plugin used to uniquely identify it within the context of
      * WordPress and to define internationalization functionality.
      *
-     * @since     1.0.0
      * @return    string    The name of the plugin.
+     * @since     1.0.0
      */
     public function get_plugin_name()
     {
@@ -209,8 +209,8 @@ class Mepu_Woo
     /**
      * The reference to the class that orchestrates the hooks with the plugin.
      *
-     * @since     1.0.0
      * @return    Mepu_Woo_Loader    Orchestrates the hooks of the plugin.
+     * @since     1.0.0
      */
     public function get_loader()
     {
@@ -220,8 +220,8 @@ class Mepu_Woo
     /**
      * Retrieve the version number of the plugin.
      *
-     * @since     1.0.0
      * @return    string    The version number of the plugin.
+     * @since     1.0.0
      */
     public function get_version()
     {

@@ -141,7 +141,7 @@ class Mepu_Woo_Frontend
      */
     public function adjust_cart_form_details_loop($args, $product)
     {
-        if(isset($args['attributes'])) {
+        if (isset($args['attributes'])) {
             if (get_post_meta($product->get_id(), '_external_show_in_cat', true) && get_post_meta($product->get_id(), '_external_target_blank', true)) {
                 $args['attributes']['target'] = '_blank';
             }
