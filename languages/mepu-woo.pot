@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Mepu_Woo
+# Copyright (C) 2021 Mepu_Woo
 # This file is distributed under the same license as the Mepu_Woo package.
 msgid ""
 msgstr ""
@@ -13,43 +13,51 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../admin/class-mepu-woo-additional-fields.php:84
+#: ../admin/templates/woocommerce-external-fields.php:3
 msgid "Multiple external product URLs"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:84
+#: ../admin/class-mepu-woo-additional-fields.php:4
 msgid "Add new"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:89
+#: ../admin/class-mepu-woo-additional-fields.php:10
 msgid "Open in new tab"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:90
+#: ../admin/class-mepu-woo-additional-fields.php:11
 msgid "Open external / affiliate URLs in new tab?"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:95
+#: ../admin/class-mepu-woo-additional-fields.php:18
+msgid "Category pages"
+msgstr ""
+
+#: ../admin/class-mepu-woo-additional-fields.php:19
+msgid "Show all external product buttons on category pages"
+msgstr ""
+
+#: ../admin/class-mepu-woo-additional-fields.php:24
 msgid "## External / Affiliate product details"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:95
+#: ../admin/class-mepu-woo-additional-fields.php:25
 msgid "Delete"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:100
+#: ../admin/class-mepu-woo-additional-fields.php:31
 msgid "Product URL ##"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:108
+#: ../admin/class-mepu-woo-additional-fields.php:39
 msgid "Button text ##"
 msgstr ""
 
-#: ../admin/class-mepu-woo-additional-fields.php:109
+#: ../admin/class-mepu-woo-additional-fields.php:40
 msgctxt "placeholder"
 msgid "Buy product"
 msgstr ""
 
-#: ../includes/class-mepu-woo-activator.php:37
+#: ../includes/class-mepu-woo-activator.php:25
 msgid "Please install and activate WooCommerce plugin first."
 msgstr ""

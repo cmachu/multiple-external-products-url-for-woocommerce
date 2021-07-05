@@ -1,21 +1,15 @@
 <?php
 
 /**
- * Register all actions and filters for the plugin
- *
- * @link       http://cmachowski.com
- * @since      1.0.0
- *
- * @package    Mepu_Woo
- * @subpackage Mepu_Woo/includes
- */
-
-/**
+ * Package from plugin starter
  * Register all actions and filters for the plugin.
  *
  * Maintain a list of all hooks that are registered throughout
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
+ *
+ * @link       http://cmachowski.com
+ * @since      1.0.0
  *
  * @package    Mepu_Woo
  * @subpackage Mepu_Woo/includes
@@ -23,7 +17,6 @@
  */
 class Mepu_Woo_Loader
 {
-
     /**
      * The array of actions registered with WordPress.
      *
@@ -49,10 +42,8 @@ class Mepu_Woo_Loader
      */
     public function __construct()
     {
-
-        $this->actions = array();
-        $this->filters = array();
-
+        $this->actions = [];
+        $this->filters = [];
     }
 
     /**
@@ -101,17 +92,15 @@ class Mepu_Woo_Loader
      */
     private function add($hooks, $hook, $component, $callback, $priority, $accepted_args)
     {
-
-        $hooks[] = array(
+        $hooks[] = [
             'hook' => $hook,
             'component' => $component,
             'callback' => $callback,
             'priority' => $priority,
             'accepted_args' => $accepted_args
-        );
+        ];
 
         return $hooks;
-
     }
 
     /**
@@ -121,15 +110,12 @@ class Mepu_Woo_Loader
      */
     public function run()
     {
-
         foreach ($this->filters as $hook) {
-            add_filter($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
+            add_filter($hook['hook'], [$hook['component'], $hook['callback']], $hook['priority'], $hook['accepted_args']);
         }
 
         foreach ($this->actions as $hook) {
-            add_action($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
+            add_action($hook['hook'], [$hook['component'], $hook['callback']], $hook['priority'], $hook['accepted_args']);
         }
-
     }
-
 }

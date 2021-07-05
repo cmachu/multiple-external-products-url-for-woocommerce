@@ -1,33 +1,17 @@
 <?php
 
 /**
- * Define the internationalization functionality
- *
- * Loads and defines the internationalization files for this plugin
- * so that it is ready for translation.
+ * Define the internationalization functionality.
  *
  * @link       http://cmachowski.com
  * @since      1.0.0
  *
  * @package    Mepu_Woo
  * @subpackage Mepu_Woo/includes
- */
-
-/**
- * Define the internationalization functionality.
- *
- * Loads and defines the internationalization files for this plugin
- * so that it is ready for translation.
- *
- * @since      1.0.0
- * @package    Mepu_Woo
- * @subpackage Mepu_Woo/includes
  * @author     Paweł Ćmachowski <pawel.cmachowski@gmail.com>
  */
 class Mepu_Woo_i18n
 {
-
-
     /**
      * Load the plugin text domain for translation.
      *
@@ -35,14 +19,10 @@ class Mepu_Woo_i18n
      */
     public function load_plugin_textdomain()
     {
-
         load_plugin_textdomain(
-            'mepu-woo',
+            MEPU_WOO_SLUG,
             false,
-            dirname(dirname(plugin_basename(__FILE__))) . '/languages/'
+            MEPU_WOO_DIR_NAME . '/languages/'
         );
-
     }
-
-
 }
